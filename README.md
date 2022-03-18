@@ -4,6 +4,8 @@ Frequently used code lines during various Machine Learning Projects. Can be help
 
 **One hot encoding**
 ```
+from sklearn.preprocessing import OneHotEncoder
+
 def encoding(encode_col_name,data_frame): 
     hot_encode = OneHotEncoder()
     hot_encode.fit(data_frame[encode_col_name]) # column can be one or more
