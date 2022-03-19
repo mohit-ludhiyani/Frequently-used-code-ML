@@ -28,6 +28,12 @@ zero_variance_columns = dataframe.columns[~var_thr.get_support()]
 new_dataframe = dataframe.drop(zero_variance_columns,axis=1)
 ```
 
+**Splitting data into train and validation datasets** 
+```
+from sklearn.model_selection import train_test_split
+X_train, X_val, Y_train, Y_val = train_test_split(X, Y, test_size=0.1, shuffle=False)
+```
+
 
 
 
