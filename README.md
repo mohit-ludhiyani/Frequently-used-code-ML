@@ -18,4 +18,16 @@ def encoding(encode_col_name,data_frame):
 new_dataframe = pd.concat([dataframe_1,dataframe_2],axis=1) # axis = 1 to stack two dataframes vertically else 0.
 ```
 
+**Removing Zero/Low variance features/columns from dataframe**
+```
+from sklearn.feature_selection import VarianceThreshold
+
+var_thr = VarianceThreshold(threshold = 0.0) #Removing var<=0 columns
+var_thr.fit(dataframe)
+zero_variance_columns = dataframe.columns[~var_thr.get_support()]
+new_dataframe = dataframe.drop(zero_variance_columns,axis=1)
+```
+
+
+
 
