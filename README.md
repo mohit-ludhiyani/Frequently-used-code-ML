@@ -12,3 +12,10 @@ def encoding(encode_col_name,data_frame):
     data_frame[list(hot_encode.get_feature_names_out())] = hot_encode.transform(data_frame[encode_col_name]).toarray()
     return data_frame 
 ```
+
+**Concatinating Two Dataframes**
+```
+new_dataframe = pd.concat([dataframe_1,dataframe_2],axis=1) # axis = 1 to stack two dataframes vertically else 0.
+```
+
+
